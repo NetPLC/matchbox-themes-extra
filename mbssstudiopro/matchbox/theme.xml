@@ -1,0 +1,189 @@
+<?xml version="1.0"?>
+<theme name="sstudiopro" author="Matthew Allum - mallum@handhelds.org"
+       desc="" version="1.0" engine_version="1" >
+
+<!-- List Resources, defined by an id and then a definition -->
+
+<!-- Colors, in the format #rrggbb. <color id="bgcol" def="#d6da7a" /> -->
+<color id="black" def="#000000" />
+<color id="white" def="#ffffff" />
+<color id="outerborder" def="#8c92a2" />
+<color id="innerborder" def="#a4abbb" />
+<color id="menubg" def="#a6adbd" />
+
+<!-- Fonts, alternate fonts can be listed seperated by a '|'   
+            The first matched will be used.                   -->
+<font id="titlefont" def="Bitstream Vera Sans:bold:pixelsize=12|verdana-9:pixelsize=10|fixed" /> 
+<font id="barfont"   def="Bitstream Vera Sans-5:pixelsize=8|verdana-6:pixelsize=8|5x7|fixed" />
+
+<!-- Pixmaps. xpm or png ( if support compiled in ) supported.
+     They are expected to be found in the same location as this file -->
+
+<pixmap id="button-down" filename="button-down.png" />
+<pixmap id="button-up" filename="button-up.png" />
+<pixmap id="titlebar-end" filename="titlebar-end.png" />
+<pixmap id="titlebar-start" filename="titlebar-start.png" />
+<pixmap id="titlebar-tile" filename="titlebar-tile.png" />
+<pixmap id="buttsmallclosedown" filename="buttsmallclosedown.png" />
+<pixmap id="buttsmallmindown" filename="buttsmallmindown.png" />
+<pixmap id="buttsmallmaxdown" filename="buttsmallmaxdown.png" />
+
+
+<frame id="main" height="23">
+
+  <layer x="6" y="0" w="100%-12"  h="100%" 
+   type="pixmap" pixmap="titlebar-tile" />
+
+  <layer x="0" y="0" w="object" h="object" 
+   type="pixmap" pixmap="titlebar-start" />
+
+  <layer x="-6" y="0" w="object" h="object" 
+   type="pixmap" pixmap="titlebar-end" />
+
+  <layer x="6" y="1" w="100%-25" h="23" 
+   type="label" color="black" justify="center" font="titlefont" />
+
+  <button x="-25" y="0" w="19" h="23" action="close" >
+   <active pixmap="button-down" />
+   <inactive pixmap="button-up" />
+  </button>
+
+  <button x="labelx" y="0" w="labelw" h="23" action="menu" options="inputonly" />
+
+</frame>
+
+<!-- empty border frames, these are empty and will just be black with no 
+     layers. Notice the width/height attributes. -->
+
+<frame id="main-east"  width="3" >
+
+  <layer x="0" y="0" w="100%"  h="100%" 
+   type="plain" color="innerborder" />
+
+  <layer x="2" y="0" w="1"  h="100%" 
+   type="plain" color="outerborder" />
+
+</frame>
+
+<frame id="main-west"  width="3" >
+  <layer x="0" y="0" w="100%"  h="100%" 
+   type="plain" color="innerborder" />
+
+  <layer x="0" y="0" w="1"  h="100%" 
+   type="plain" color="outerborder" />
+
+</frame>
+
+<frame id="main-south" height="3" >
+  <layer x="0" y="0" w="100%"  h="100%" 
+   type="plain" color="innerborder" />
+
+  <layer x="0" y="2" w="100%"  h="1" 
+   type="plain" color="outerborder" />
+
+</frame>
+
+
+<frame id="dialog" height="23" options="shaped">
+
+  <layer x="6" y="0" w="100%-12"  h="100%" 
+   type="plain" color="outerborder" />
+
+  <layer x="6" y="0" w="100%-12"  h="100%" 
+   type="pixmap" pixmap="titlebar-tile" />
+
+  <layer x="0" y="0" w="object" h="object" 
+   type="pixmap" pixmap="titlebar-start" />
+
+  <layer x="-6" y="0" w="object" h="object" 
+   type="pixmap" pixmap="titlebar-end" />
+
+  <layer x="6" y="1" w="100%-25" h="23" 
+   type="label" color="black" justify="center" font="titlefont" />
+
+  <button x="-25" y="0" w="19" h="23" action="close" >
+   <active pixmap="button-down" />
+   <inactive pixmap="button-up" />
+  </button>
+
+</frame>
+
+<frame id="dialog-north" height="1" >
+
+  <layer x="0" y="0" w="100%"  h="100%" 
+   type="plain" color="outerborder" />
+  
+</frame>
+
+<frame id="dialog-east" width="1" >
+
+  <layer x="0" y="0" w="100%"  h="100%" 
+   type="plain" color="outerborder" />
+
+</frame>
+
+<frame id="dialog-west" width="1" >
+
+  <layer x="0" y="0" w="100%"  h="100%" 
+   type="plain" color="outerborder" />
+
+</frame>
+
+<frame id="dialog-south" height="1" >
+
+  <layer x="0" y="0" w="100%"  h="100%" 
+   type="plain" color="outerborder" />
+
+</frame>
+
+<!-- utilities are things like xkbd. You need to define frames for 
+     both minimised and maximised states  -->
+
+<frame id="utility-max" width="12">
+
+  <layer x="0" y="0" w="100%"  h="100%" 
+   type="plain" color="outerborder" />
+
+  <layer x="1" y="1" w="100%-2"  h="100%-2" 
+   type="plain" color="menubg" />
+
+  <button x="1" y="2" w="10" h="10" action="minimize" >
+   <inactive pixmap="buttsmallmindown" />
+  </button>
+
+  <button x="0" y="0" w="14" h="80%" action="minimize" options="inputonly"/>
+
+</frame>
+
+<frame id="utility-min" height="12">
+
+  <layer x="0" y="0" w="100%"  h="100%" 
+   type="plain" color="outerborder" />
+
+  <layer x="1" y="1" w="100%-2"  h="100%-2" 
+   type="plain" color="menubg" />
+
+  <button x="16" y="0" w="100%-32" h="23" action="maximize" 
+   options="inputonly"/>
+
+  <button x="100%-12" y="1" w="10" h="23" action="close" >
+   <inactive pixmap="buttsmallclosedown" />
+  </button>
+
+  <button x="2" y="1" w="10" h="10" action="maximize" >
+   <inactive pixmap="buttsmallmaxdown" />
+  </button>
+
+</frame>
+
+<frame id="menu" height="1" font="titlefont" color="black" >
+
+  <layer x="0" y="0" w="100%"  h="100%" 
+   type="plain" color="outerborder" />
+
+  <layer x="1" y="1" w="100%-2"  h="100%-2" 
+   type="plain" color="menubg" />
+
+</frame>
+
+</theme>

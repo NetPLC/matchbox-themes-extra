@@ -1,0 +1,158 @@
+<?xml version="1.0"?>
+<theme name="mbcrystal" author="Matthew Allum - mallum@handhelds.org"
+       desc="" version="1.0" engine_version="1" >
+
+<color id="bgcol" def="white" />
+<color id="black" def="#cccccc" />
+<color id="textcol" def="white" />
+<color id="trans" def="#ffffff00"/>
+<color id="dockblue" def="#eeeeff" />
+<color id="barblue" def="#5d79af" />
+
+<font id="titlefont" def="Bauhaus,Sans bold 14px" />
+<font id="barfont"   def="Bitstream Vera Sans-6|verdana-6|5x7|fixed" />
+
+<pixmap id="close"      filename="close.png" />
+<pixmap id="minimize"   filename="minimise.png" />
+<pixmap id="next"       filename="next.png" />
+<pixmap id="prev"       filename="prev.png" />
+<pixmap id="topleft"    filename="topleft.png" />
+<pixmap id="topright"   filename="topright.png" />
+<pixmap id="toptile"    filename="toptile.png" />
+<pixmap id="bottomleft" filename="bottomleft.png" />
+<pixmap id="bottomright" filename="bottomright.png" />
+<pixmap id="bottomtile" filename="bottom-tile.png" />
+<pixmap id="side"       filename="dialog-side.png" />
+<pixmap id="buttsmallclosedown" filename="buttsmallclosedown.png" />
+<pixmap id="buttsmallmindown" filename="buttsmallmindown.png" />
+<pixmap id="buttsmallmaxdown" filename="buttsmallmaxdown.png" />
+<pixmap id="noappicon" filename="noappicon.png"/>
+
+<frame id="main" height="18">
+
+  <layer x="0" y="0" w="100%"  h="100%" 
+   type="pixmap" pixmap="toptile" />
+
+  <layer x="0" y="0" w="object"  h="object" 
+   type="pixmap" pixmap="topleft" />
+
+  <layer x="-7" y="0" w="object"  h="object" 
+   type="pixmap" pixmap="topright" />
+
+  <layer x="4" y="2" w="16"  h="16" type="icon" />
+
+  <layer x="22" y="3" w="100%-70" h="20" 
+   type="label" color="textcol" justify="left" font="titlefont" />
+
+  <button x="-18" y="4" w="12" h="12" action="close" >
+   <active pixmap="close" blend="-150"/>
+   <inactive pixmap="close" blend="-50"/>
+  </button>
+
+  <button x="-46" y="4" w="12" h="12" action="prev" >
+   <active pixmap="prev" blend="-150"/>
+   <inactive pixmap="prev" blend="-50"/>
+  </button>
+
+  <button x="-32" y="4" w="12" h="12" action="next" >
+   <active pixmap="next" blend="-150"/>
+   <inactive pixmap="next" blend="-50"/>
+  </button>
+
+</frame>
+
+<frame id="dialog" height="18" options="shaped">
+
+  <layer x="7" y="0" w="100%-14"  h="100%" 
+   type="plain" color="bgcol" />
+
+  <layer x="0" y="0" w="object"  h="object" 
+   type="pixmap" pixmap="topleft" />
+
+  <layer x="-7" y="0" w="object"  h="object" 
+   type="pixmap" pixmap="topright" />
+
+  <layer x="7" y="0" w="100%-14"  h="100%" 
+   type="pixmap" pixmap="toptile" />
+
+  <layer x="22" y="3" w="100%-60" h="20" 
+   type="label" color="textcol" justify="left" font="titlefont" />
+
+  <button x="-18" y="4" w="12" h="12" action="close" >
+   <active pixmap="close" blend="-150"/>
+   <inactive pixmap="close" blend="-50"/>
+  </button>
+
+</frame>
+
+<frame id="dialog-east" width="4" >
+
+  <layer x="0" y="0" w="100%"  h="100%" 
+   type="pixmap" pixmap="side" />
+
+</frame>
+
+<frame id="dialog-west" width="4" >
+
+  <layer x="0" y="0" w="100%"  h="100%" 
+   type="pixmap" pixmap="side" />
+
+</frame>
+
+<frame id="dialog-south" height="8" >
+
+  <layer x="7" y="0" w="100%-14"  h="100%" 
+   type="plain" color="bgcol" />
+
+  <layer x="7" y="0" w="100%-14"  h="100%" 
+   type="pixmap" pixmap="bottomtile" />
+
+  <layer x="0" y="0" w="object"  h="object" 
+   type="pixmap" pixmap="bottomright" />
+
+  <layer x="-7" y="0" w="object"  h="object" 
+   type="pixmap" pixmap="bottomleft" />
+
+</frame>
+
+<frame id="utility-max" width="12">
+  <layer x="0" y="0" w="100%"  h="100%" 
+   type="plain" color="dockblue" />
+
+  <button x="1" y="2" w="10" h="10" action="minimize" >
+   <inactive pixmap="buttsmallmindown" />
+  </button>
+
+  <button x="0" y="0" w="14" h="80%" action="minimize" options="inputonly"/>
+
+</frame>
+
+<frame id="utility-min" height="13">
+
+  <layer x="0" y="0" w="100%"  h="100%" 
+   type="plain" color="dockblue" />
+
+  <layer x="0" y="12" w="100%"  h="1" 
+   type="plain" color="bgcol" />
+
+  <layer x="29" y="2" w="100%-32" h="23" 
+   type="label" color="barblue" justify="left" font="barfont" />
+
+  <button x="16" y="0" w="100%-32" h="23" action="maximize" 
+   options="inputonly"/>
+
+  <button x="100%-12" y="1" w="10" h="23" action="close" >
+   <inactive pixmap="buttsmallclosedown" />
+  </button>
+
+  <button x="2" y="1" w="10" h="10" action="maximize" >
+   <inactive pixmap="buttsmallmaxdown" />
+  </button>
+
+</frame>
+
+<frame id="menu" height="0" font="titlefont" color="textcol" />
+
+<appicon pixmap="noappicon" />
+
+</theme>

@@ -1,0 +1,1 @@
+SUBDIRS = matchbox background gtk-2.0 icons

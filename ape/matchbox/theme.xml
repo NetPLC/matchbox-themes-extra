@@ -1,0 +1,143 @@
+<?xml version="1.0"?>
+<theme name="pocketmb" author="Matthew Allum - mallum@handhelds.org"
+       desc="" version="1.0" engine_version="1" >
+
+<color id="black"        def="#000000" />
+<color id="white"        def="#ffffff" />
+<color id="gray"         def="#777777" />
+<color id="grayblue"         def="#bebec7" />
+
+<color id="dockcol"      def="#d7dbd7" />
+<color id="darkbluebdr"  def="#00178f" />
+<color id="lightblue"    def="#0063ff" />
+<color id="lightbluebdr" def="#004bff" />
+
+<font id="titlefont" def="Bitstream Vera Sans-8:bold|verdana-7|fixed" />
+
+<pixmap id="closebutton" filename="19x17-closebuttonup.png" />
+<pixmap id="title-bg"    filename="title-bg-tile-16x23.png" />
+<pixmap id="title-left"  filename="title-left-6x23.png" />
+<pixmap id="title-right" filename="title-right-6x23.png" />
+<pixmap id="bottom-left"  filename="bottom-left-6x6.png" />
+<pixmap id="bottom-right" filename="bottom-right-6x6.png" />
+
+<frame id="main" height="23">
+
+  <layer x="0" y="0" w="100%"  h="100%" 
+   type="plain" color="dockcol" />
+
+  <layer x="0" y="22" w="100%"  h="1" 
+   type="plain" color="black" />
+
+  <layer x="0" y="0" w="object" h="object" 
+   type="pixmap" pixmap="title-left" />
+
+  <layer x="6" y="0" w="60%" h="object" 
+   type="pixmap" pixmap="title-bg" />
+
+  <layer x="60%+6" y="0" w="object" h="object" 
+   type="pixmap" pixmap="title-right" />
+
+  <layer x="24" y="3" w="60%-12" h="20" 
+   type="label" color="gray" justify="left" font="titlefont" />
+
+  <button x="21" y="0" w="60%-20" h="23" action="menu" options="inputonly" />
+
+  <button x="3" y="3" w="19" h="17" action="close" >
+   <active pixmap="closebutton" blend="-150"/>
+   <inactive pixmap="closebutton" />
+  </button>
+
+  <panel x="60%+15" y="2" w="40%-15" h="20" />
+
+</frame>
+
+<frame id="main-east"  width="0" >
+
+</frame>
+
+<frame id="main-west"  width="0" >
+
+</frame>
+
+<frame id="main-south"  height="1" >
+
+  <layer x="0" y="0" w="100%"  h="100%" 
+   type="plain" color="black" />
+
+</frame>
+
+<frame id="dialog" height="23" options="shaped">
+
+  <layer x="0" y="22" w="100%"  h="1" 
+   type="plain" color="black" />
+
+  <layer x="0" y="0" w="object" h="object" 
+   type="pixmap" pixmap="title-left" />
+
+  <layer x="6" y="0" w="100%-12" h="object" 
+   type="pixmap" pixmap="title-bg" />
+
+  <layer x="100%-6" y="0" w="object" h="object" 
+   type="pixmap" pixmap="title-right" />
+
+  <layer x="24" y="3" w="100%-24" h="20" 
+   type="label" color="gray" justify="left" font="titlefont" />
+
+  <button x="3" y="3" w="19" h="17" action="close" >
+   <active pixmap="closebutton" blend="-150"/>
+   <inactive pixmap="closebutton" />
+  </button>
+
+</frame>
+
+<frame id="dialog-east" width="1" >
+
+  <layer x="0" y="0" w="100%"  h="100%" 
+   type="plain" color="black" />
+
+</frame>
+
+<frame id="dialog-west" width="1" >
+
+  <layer x="0" y="0" w="100%"  h="100%" 
+   type="plain" color="black" />
+
+</frame>
+
+<frame id="dialog-south" height="1" >
+
+  <layer x="0" y="0" w="100%"  h="100%" 
+   type="plain" color="black" />
+
+</frame>
+
+<frame id="menu" height="6" 
+       font="titlefont" 
+       highlight="dockcol"
+       color="gray" 
+       options="shaped"
+        >
+
+  <layer x="0" y="0" w="100%"  h="100%-6" 
+   type="plain" color="black" />
+
+  <layer x="1" y="1" w="100%-2"  h="100%-7" 
+   type="plain" color="grayblue" />
+
+  <layer x="6" y="100%-6" w="100%-12"  h="6" 
+   type="plain" color="black" />
+
+  <layer x="6" y="100%-6" w="100%-12"  h="5"	
+   type="plain" color="grayblue" />
+
+  <layer x="0" y="100%-7" w="object" h="object" 
+   type="pixmap" pixmap="bottom-left" />
+
+  <layer x="100%-6" y="100%-7" w="object" h="object" 
+   type="pixmap" pixmap="bottom-right" />
+
+
+</frame>
+
+</theme>

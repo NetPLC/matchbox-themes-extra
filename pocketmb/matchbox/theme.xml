@@ -1,0 +1,169 @@
+<?xml version="1.0"?>
+<theme name="pocketmb" author="Matthew Allum - mallum@handhelds.org"
+       desc="" version="1.0" engine_version="1" >
+
+<color id="black"        def="#000000" />
+<color id="white"        def="#ffffff" />
+<color id="darkblue"     def="#003192" />
+<color id="darkbluebdr"  def="#00178f" />
+<color id="lightblue"    def="#0063ff" />
+<color id="lightbluebdr" def="#004bff" />
+
+<font id="titlefont" def="Bitstream Vera Sans-8:bold|verdana-7|fixed" />
+
+<pixmap id="closebutton" filename="close-17x17.png" />
+
+<frame id="main" height="26">
+
+  <layer x="0" y="0" w="100%"  h="100%" 
+   type="plain" color="black" />
+
+   <!-- light blue box -->
+
+  <layer x="1" y="1" w="25"  h="25" 
+   type="plain" color="lightbluebdr" />
+
+  <layer x="2" y="2" w="23"  h="23" 
+   type="plain" color="lightblue" />
+
+   <!-- white line -->
+
+  <layer x="25" y="1" w="1"  h="25" 
+   type="plain" color="white" />
+
+  <!-- main blue box -->
+
+  <layer x="26" y="1" w="100%-26"  h="25" 
+   type="plain" color="darkbluebdr" />
+
+  <layer x="27" y="2" w="100%-28"  h="23" 
+   type="plain" color="darkblue" />
+
+  <!-- icon -->
+
+  <layer x="5" y="5" w="20"  h="20" type="icon" />
+
+  <layer x="30" y="5" w="100%-60" h="20" 
+   type="label" color="white" justify="left" font="titlefont" />
+
+  <button x="2" y="0" w="100%-60" h="26" action="menu" options="inputonly" />
+
+  <button x="-22" y="4" w="17" h="17" action="close" >
+   <active pixmap="closebutton" blend="-150"/>
+   <inactive pixmap="closebutton" />
+  </button>
+
+</frame>
+
+<frame id="main-east"  width="1" >
+
+  <layer x="0" y="0" w="100%"  h="100%" 
+   type="plain" color="black" />
+
+</frame>
+
+<frame id="main-west"  width="1" >
+
+  <layer x="0" y="0" w="100%"  h="100%" 
+   type="plain" color="black" />
+
+</frame>
+
+<frame id="main-south"  height="1" >
+
+  <layer x="0" y="0" w="100%"  h="100%" 
+   type="plain" color="black" />
+
+</frame>
+
+<frame id="dialog" height="26">
+
+  <layer x="0" y="0" w="100%"  h="100%" 
+   type="plain" color="black" />
+
+  <!-- main blue box -->
+
+  <layer x="1" y="1" w="100%-2"  h="25" 
+   type="plain" color="darkbluebdr" />
+
+  <layer x="2" y="2" w="100%-1"  h="23" 
+   type="plain" color="darkblue" />
+
+  <layer x="2" y="5" w="100%-30" h="20" 
+   type="label" color="white" justify="left" font="titlefont" />
+
+  <button x="-22" y="4" w="17" h="17" action="close" >
+   <active pixmap="closebutton" blend="-150"/>
+   <inactive pixmap="closebutton" />
+  </button>
+
+</frame>
+
+<frame id="dialog-east" width="1" >
+
+  <layer x="0" y="0" w="100%"  h="100%" 
+   type="plain" color="black" />
+
+</frame>
+
+<frame id="dialog-west" width="1" >
+
+  <layer x="0" y="0" w="100%"  h="100%" 
+   type="plain" color="black" />
+
+</frame>
+
+<frame id="dialog-south" height="1" >
+
+  <layer x="0" y="0" w="100%"  h="100%" 
+   type="plain" color="black" />
+
+</frame>
+
+<frame id="menu" height="1" font="titlefont" color="white" >
+
+  <layer x="0" y="0" w="100%"  h="100%" 
+   type="plain" color="black" />
+
+  <layer x="1" y="1" w="100%-2"  h="100%-2" 
+   type="plain" color="darkblue" />
+
+
+</frame>
+
+
+<!--
+  Notes:
+
+  1 pix black border around full window. ( not bottom of title bar )
+ 
+  light blue is #0063ff ( border 004bff )
+
+  seperated by white bar 
+
+  Text is white.
+
+  Blue is #003192  ( two blues can gradient between each other )
+
+  1 pix border #00178f
+
+  ( older panel )
+
+  light grey ( dock ) is #bebebe
+  dark grey is #797979
+
+  ( newer panel )
+
+  #dfcfc7
+
+  Sizes;
+
+  titlebar is 26pixels
+
+  panel is 26 ( 4 pix wasted with borders )
+
+  light blue box is 25 pix + 1 pix border
+
+-->
+
+</theme>

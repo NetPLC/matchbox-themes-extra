@@ -1,0 +1,16 @@
+[Desktop Entry]
+Type=MBTheme
+Name=pocketmb
+Preview=XXX
+Comment=pocketmb
+
+DockBgColor=#dfcfc7
+MenuBgColor=#ffffff
+MenuFgColor=#000000
+MenuBdColor=#000000
+
+PanelFgColor=black
+
+MenuFont=Bitstream Vera Sans-8:bold
+
+DesktopBgSpec=col-solid:#ffffff

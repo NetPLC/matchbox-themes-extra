@@ -1,0 +1,13 @@
+[Desktop Entry]
+Type=MBTheme
+Name=mbssstudiopro
+Comment=Matchbox theme based on ssstudiopro Mac OS X theme
+
+DockBgPixmap=dockbg.png
+PanelFgColor=black
+MenuBgColor=#a6adbd
+MenuFgColor=black
+MenuBdColor=#8c92a2
+MenuHlColor=black
+
+DesktopBgSpec=col-solid:#ffffff

@@ -1,0 +1,5 @@
+ARCH=all
+MAINTAINER=mallum@handhelds.org
+SOURCE=http://www.sidske.com:8080/matchbox-themes
+DEPS='libpng12-0,libjpeg62'
+DESC="3 Extra themes for Matchbox"

@@ -1,0 +1,19 @@
+[Desktop Entry]
+
+Type=MBTheme
+Name=mbcrystal
+Comment=A version on KDE's crystal theme for matchbox
+
+PanelBgColor=#d8e0e8
+PanelFgColor=#222222
+
+PanelMsgBgCol=#20c110
+PanelMsgBgUrgentCol=#fa1000
+PanelMsgFgCol=#000000
+
+MenuBgColor=#d8e0e8
+MenuFgColor=#222222
+MenuBdColor=#485c60
+MenuHlColor=#5878a8
+
+DesktopBgSpec=img-tiled:PREFIX/share/themes/mbcrystal/background/default.jpg
