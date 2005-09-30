@@ -1,0 +1,185 @@
+<?xml version="1.0"?>
+<theme name="Clearlooks" author="Matthew Allum - mallum@handhelds.org"
+       desc="A version of clearlooks for mb" version="1.0" engine_version="1" >
+
+
+<color id="white" def="#ffffff" />
+<color id="black" def="#000000" />
+
+<color id="bdrdark" def="#3d3c33" />
+<color id="gtklightbg" def="#ece9d8" />
+<color id="gtkshadow1" def="#cfc9a8" />
+<color id="paneledge" def="#b6af87" />
+
+<font id="titlefont" def="Sans bold shadow 18px" />
+<font id="menufont" def="Sans bold 24px" />
+
+<pixmap id="bottomleft" filename="bottom-left.png" />  
+<pixmap id="bottommidtile" filename="bottom-midtile.png" />  
+<pixmap id="bottomright" filename="bottom-right.png" />  
+<pixmap id="closebuttondown" filename="close-button-down.png" />  
+<pixmap id="closebutton" filename="close-button.png" />  
+<pixmap id="left" filename="left.png" />  
+<pixmap id="midtile" filename="midtile.png" />  
+<pixmap id="right" filename="right.png" />  
+<pixmap id="panelright" filename="panelright.png" />  
+<pixmap id="panelleft" filename="panelleft.png" />  
+<pixmap id="paneltile" filename="paneltile.png" />  
+
+<frame id="main" height="24">
+
+  <layer x="0" y="0" w="100%"  h="24" 
+   type="pixmap" pixmap="midtile" />
+
+  <layer x="0" y="0" w="object"  h="object" 
+   type="pixmap" pixmap="left" />
+
+  <layer x="100%-5" y="0" w="object"  h="object" 
+   type="pixmap" pixmap="right" />
+
+<!--
+   <layer x="0" y="0" w="128"  h="100%-1" 
+    type="plain"  color="paneledge" />
+
+  <layer x="128" y="0" w="object"  h="object" 
+   type="pixmap" pixmap="paneldiv" />
+-->
+
+  <layer x="4" y="4" w="100%-100" h="20" 
+   type="label" color="white" justify="center" font="titlefont" />
+
+  <button x="100%-28" y="3" w="19" h="19" action="close" >
+   <active pixmap="closebuttondown" />
+   <inactive pixmap="closebutton" />
+  </button>
+
+  <layer x="100%-100" y="0" w="object"  h="object" 
+   type="pixmap" pixmap="panelleft" />
+
+  <layer x="100%-94" y="0" w="54"  h="100%" 
+   type="pixmap" pixmap="paneltile" />
+
+  <layer x="100%-40" y="0" w="object"  h="object" 
+   type="pixmap" pixmap="panelright" />
+
+   <panel x="100%-94" y="1" w="54" h="20" />
+
+</frame>
+
+<frame id="main-west"  width="5" >
+
+  <layer x="0" y="0" w="100%"  h="100%" 
+   type="plain" color="gtklightbg" />
+
+  <layer x="0" y="0" w="1"  h="100%" 
+   type="plain" color="bdrdark" />
+
+  <layer x="1" y="0" w="1"  h="100%" 
+   type="plain" color="white" />
+
+</frame>
+
+<frame id="main-east"  width="5" >
+
+  <layer x="0" y="0" w="100%"  h="100%" 
+   type="plain" color="gtklightbg" />
+
+  <layer x="100%-1" y="0" w="1"  h="100%" 
+   type="plain" color="bdrdark" />
+
+  <layer x="100%-2" y="0" w="1"  h="100%" 
+   type="plain" color="gtkshadow1" />
+
+</frame>
+
+<frame id="main-south" height="5" >
+
+  <layer x="0" y="0" w="100%"  h="5" 
+   type="pixmap" pixmap="bottommidtile" />
+
+  <layer x="0" y="0" w="object"  h="object" 
+   type="pixmap" pixmap="bottomleft" />
+
+  <layer x="100%-5" y="0" w="object"  h="object" 
+   type="pixmap" pixmap="bottomright" />
+
+</frame>
+
+
+<frame id="dialog" height="24" options="shaped">
+
+  <layer x="0" y="0" w="100%"  h="24" 
+   type="pixmap" pixmap="midtile" />
+
+  <layer x="0" y="0" w="object"  h="object" 
+   type="pixmap" pixmap="left" />
+
+  <layer x="100%-5" y="0" w="object"  h="object" 
+   type="pixmap" pixmap="right" />
+
+  <layer x="14" y="4" w="100%-70" h="20" 
+   type="label" color="white" justify="center" font="titlefont" />
+
+  <button x="100%-24" y="3" w="19" h="19" action="close" >
+   <active pixmap="closebuttondown" />
+   <inactive pixmap="closebutton" />
+  </button>
+  
+</frame>
+
+
+<frame id="dialog-north" height="4" options="shaped">
+
+  <layer x="0" y="0" w="100%"  h="24" 
+   type="pixmap" pixmap="midtile" />
+
+  <layer x="0" y="0" w="object"  h="object" 
+   type="pixmap" pixmap="left" />
+
+  <layer x="100%-5" y="0" w="object"  h="object" 
+   type="pixmap" pixmap="right" />
+
+</frame>
+
+<frame id="dialog-east" width="4" >
+
+  <layer x="0" y="0" w="100%"  h="100%" 
+   type="plain" color="gtklightbg" />
+
+  <layer x="100%-1" y="0" w="1"  h="100%" 
+   type="plain" color="bdrdark" />
+
+  <layer x="100%-2" y="0" w="1"  h="100%" 
+   type="plain" color="gtkshadow1" />
+
+
+</frame>
+
+<frame id="dialog-west" width="5" >
+
+  <layer x="0" y="0" w="100%"  h="100%" 
+   type="plain" color="gtklightbg" />
+
+  <layer x="0" y="0" w="1"  h="100%" 
+   type="plain" color="bdrdark" />
+
+  <layer x="1" y="0" w="1"  h="100%" 
+   type="plain" color="white" />
+
+</frame>
+
+<frame id="dialog-south" height="5" >
+
+  <layer x="0" y="0" w="100%"  h="5" 
+   type="pixmap" pixmap="bottommidtile" />
+
+  <layer x="0" y="0" w="object"  h="object" 
+   type="pixmap" pixmap="bottomleft" />
+
+  <layer x="100%-5" y="0" w="object"  h="object" 
+   type="pixmap" pixmap="bottomright" />
+
+</frame>
+
+
+</theme>

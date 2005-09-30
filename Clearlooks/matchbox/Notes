@@ -1,0 +1,16 @@
+
+text centered white with grey? shadow
+
+24 pix high
+
+midtile 32x24
+close-button 19x19
+corners top ( left+right ) 5x24
+
+dark panel edge b6af87 ( paneldiv is 6x24 )
+
+bottom is 5px high ( tile 5x7, corners 5x5 )
+1px dark border is 3d3c33
+
+gtk bg ece9d8 ( lighter one )
+shadow edge cfc9a8

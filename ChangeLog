@@ -1,0 +1,21 @@
+2005-09-30  mallum  <mallum@openedhand.com>
+
+	* Clearlooks/background/Makefile.am:
+	* Clearlooks/matchbox/Makefile.am:
+	* Clearlooks/matchbox/Notes:
+	* Clearlooks/matchbox/theme.desktop.in:
+	* Clearlooks/matchbox/theme.xml:
+	* Makefile.am:
+	* autogen.sh:
+	* configure.ac:
+	* mbcrystal/matchbox/theme.desktop:
+	Add initial clearlooks theme
+
+2005-04-28  mallum,,,  <mallum@openedhand.com>
+
+	reviewed by: <delete if not using a buddy>
+
+	* Industrial/matchbox/theme.xml:
+	* autogen.sh:
+	* mbcrystal/matchbox/theme.desktop:
+

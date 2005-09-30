@@ -16,4 +16,4 @@ MenuFgColor=#222222
 MenuBdColor=#485c60
 MenuHlColor=#5878a8
 
-DesktopBgSpec=img-tiled:/usr/share/themes/mbcrystal/background/default.jpg
+DesktopBgSpec=img-tiled:/usr/local/share/themes/mbcrystal/background/default.jpg

@@ -1,6 +1,6 @@
 # Process this file with autoconf to produce a configure script.
 AC_INIT(mbcrystal/matchbox/theme.xml)
-AM_INIT_AUTOMAKE(matchbox-themes-extra, 0.3)
+AM_INIT_AUTOMAKE(matchbox-themes-extra, 0.4)
 AM_CONFIG_HEADER(config.h)
 
 # Checks for programs.
@@ -22,4 +22,8 @@ expose/icons/Makefile
 expose/background/Makefile
 expose/gtk-2.0/Makefile
 expose/gtk-2.0/icons/Makefile
+Clearlooks/Makefile
+Clearlooks/matchbox/Makefile
+Clearlooks/icons/Makefile
+Clearlooks/background/Makefile
 ])

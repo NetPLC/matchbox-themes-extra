@@ -22,13 +22,13 @@ echo "Running:"
 echo "- libtoolize"                   && \
 libtoolize --copy --force --automake  && \
 echo "- aclocal"                      && \
-aclocal-1.4                           && \
+aclocal                               && \
 echo "- autoconf"                     && \
 autoconf                              && \
 echo "- autoheader"                   && \
 autoheader                            && \
 echo "- automake"                     && \
-automake-1.4 --add-missing --gnu      && \
+automake --add-missing --gnu      && \
 echo                                  && \
 echo "Now run ./configure [options] and then make." && \
 echo                                  && \
