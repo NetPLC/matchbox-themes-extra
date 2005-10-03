@@ -14,4 +14,5 @@ MenuFgColor=black
 MenuBdColor=#cccccc
 MenuFont=Sans-10:bold
 DesktopFont=Sans-8
+DesktopHlCol=#333333
 DesktopBgSpec=img-stretched:PREFIX/share/themes/Clearlooks/background/default.png
